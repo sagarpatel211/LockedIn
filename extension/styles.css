@@ -1,0 +1,7 @@
+.feed-shared-update-v2 {
+  display: none !important;
+}
+
+.pvs-profile-section:has(h2:contains("Experience")) {
+  display: none !important;
+}

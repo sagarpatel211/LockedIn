@@ -1,0 +1,47 @@
+# -------------------
+# OS-generated files
+# -------------------
+.DS_Store
+Thumbs.db
+
+# -------------------
+# Python
+# -------------------
+*.pyc
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+.eggs/
+*.egg-info/
+*.egg
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# -------------------
+# Node.js
+# -------------------
+node_modules/
+
+# -------------------
+# Chrome Extension
+# -------------------
+# (Usually you commit your extension code, but exclude build artifacts if any)
+dist/
+build/
+
+# -------------------
+# Docker
+# -------------------
+# Exclude docker build layers if you store them locally
+**/docker-compose.override.yml
+.env
+
+# -------------------
+# Logs and temp files
+# -------------------
+*.log
+*.swp
+*.swo
+*.tmp
