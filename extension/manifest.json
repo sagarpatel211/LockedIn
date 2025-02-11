@@ -3,7 +3,7 @@
   "name": "LinkedIn Sanity Filter",
   "version": "1.0",
   "description": "Hides brag posts and work history on LinkedIn.",
-  "permissions": ["scripting", "storage", "webNavigation", "alarms", "commands"],
+  "permissions": ["scripting", "storage", "webNavigation", "alarms", "commands", "tabs"],
   "host_permissions": ["https://www.linkedin.com/*"],
   "background": {
     "service_worker": "background.js"

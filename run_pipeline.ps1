@@ -36,16 +36,32 @@ try {
     exit 1
 }
 
-# Install Python dependencies
-Write-Host "`n-> Installing Python dependencies from ml-model/requirements.txt..."
+# Upgrade pip
+Write-Host "`n-> Upgrading pip..."
 & $PythonExe -m pip install --upgrade pip
-& $PythonExe -m pip install -r .\ml-model\requirements.txt
 
-Write-Host "`n-> Installing additional Python packages for MLOps (mlflow, airflow, kfp, etc.)..."
-# For demonstration, you can tweak the versions as needed
-& $PythonExe -m pip install mlflow apache-airflow kubernetes kfp pytest
+# Install dependencies from requirements.txt (model training, ONNX, etc.)
+Write-Host "`n-> Installing Python dependencies from ml-model/requirements.txt..."
+try {
+    & $PythonExe -m pip install -r (Join-Path $PSScriptRoot "ml-model\requirements.txt")
+} catch {
+    Write-Host "WARNING: Some dependencies in requirements.txt may conflict. Trying to continue..."
+}
 
-Write-Host "`n-> Checking Node.js (optional, for JS tests or building)."
+# Install pinned MLOps & test dependencies separately to avoid resolution errors
+Write-Host "`n-> Installing pinned Python packages for MLOps & testing..."
+try {
+    # Adjust versions as needed if they still conflict
+    & $PythonExe -m pip install mlflow==2.0.1
+    & $PythonExe -m pip install apache-airflow==2.6.3
+    & $PythonExe -m pip install kubernetes==24.2.0
+    & $PythonExe -m pip install kfp==2.0.0
+    & $PythonExe -m pip install pytest
+} catch {
+    Write-Host "WARNING: MLOps dependencies encountered an error. Try adjusting pinned versions."
+}
+
+Write-Host "`n-> Checking Node.js (optional, for JS tests or building)..."
 try {
     node --version
 } catch {
@@ -62,7 +78,10 @@ Write-Host "`n[OK] Environment setup complete."
 #
 Write-Host "`n2) Training the model via train_model.ipynb..."
 try {
-    & $PythonExe -m jupyter nbconvert --to notebook --execute .\ml-model\train_model.ipynb --output .\ml-model\output.ipynb
+    & $PythonExe -m jupyter nbconvert `
+        --to notebook `
+        --execute (Join-Path $PSScriptRoot "ml-model\train_model.ipynb") `
+        --output (Join-Path $PSScriptRoot "ml-model\output.ipynb")
 } catch {
     Write-Host "ERROR: Model training notebook failed."
     exit 1
@@ -73,11 +92,15 @@ Write-Host "`n[OK] Model training & export finished. model.onnx should be in ml-
 # 3. Start Docker & MLOps Services (MLflow)
 #
 Write-Host "`n3) Starting Docker containers for MLflow (and other MLOps)..."
-if (Test-Path ".\mlops\docker\docker-compose.yml") {
-    Push-Location .\mlops\docker
-    docker-compose up -d
+if (Test-Path (Join-Path $PSScriptRoot "mlops\docker\docker-compose.yml")) {
+    Push-Location (Join-Path $PSScriptRoot "mlops\docker")
+    try {
+        docker-compose up -d
+        Write-Host "[OK] Docker containers started in the background."
+    } catch {
+        Write-Host "ERROR: Docker may not be running, or docker-compose failed."
+    }
     Pop-Location
-    Write-Host "[OK] Docker containers started in the background."
 } else {
     Write-Host "No docker-compose.yml found at .\mlops\docker. Skipping docker-compose up..."
 }
@@ -89,13 +112,19 @@ Write-Host "`n4) Running tests..."
 
 # Python tests
 Write-Host "-> Python tests (Pytest)..."
-& $PythonExe -m pytest .\tests\ --maxfail=1 --disable-warnings
+try {
+    & $PythonExe -m pytest (Join-Path $PSScriptRoot "tests") --maxfail=1 --disable-warnings
+} catch {
+    Write-Host "ERROR: Pytest failed or isn't installed properly."
+}
 
 # Node/JS tests (if you have them, e.g., test_extension.js)
-if (Test-Path ".\tests\test_extension.js") {
+$jsTestPath = Join-Path $PSScriptRoot "tests\test_extension.js"
+if (Test-Path $jsTestPath) {
     Write-Host "`n-> JavaScript tests (Jest or Mocha)..."
     try {
-        npx jest .\tests\test_extension.js
+        # If you get "Could not find a config file", create a jest.config.js or run with --config
+        npx jest $jsTestPath
     } catch {
         Write-Host "JS Tests failed or jest not installed. Skipping..."
     }
@@ -111,7 +140,11 @@ Write-Host "`n[OK] Testing phase complete."
 Write-Host "`n5) Launching Chrome for manual extension loading..."
 Write-Host "   => Remember to enable 'Developer Mode' and click 'Load unpacked' to select the 'chrome-extension/' folder.`n"
 
-Start-Process $ChromeExe "chrome://extensions"
+try {
+    Start-Process $ChromeExe "chrome://extensions"
+} catch {
+    Write-Host "ERROR: Could not launch Chrome. Make sure $ChromeExe is on your PATH or specify -ChromeExe."
+}
 
 Write-Host "[DONE] Pipeline finished!`n"
 Write-Host "--------------------------------------------------"

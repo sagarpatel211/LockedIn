@@ -45,3 +45,10 @@ build/
 *.swp
 *.swo
 *.tmp
+
+# -------------------
+# Machine Learning
+# -------------------
+ml-model/mlruns/
+ml-model/results/
+**/*.onnx

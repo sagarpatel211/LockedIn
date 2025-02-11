@@ -13,3 +13,7 @@ document.getElementById("toggleWorkHistory").addEventListener("click", () => {
       });
   });
 });
+
+document.getElementById('openPage').addEventListener('click', function() {
+  chrome.tabs.create({ url: "webpage.html" });
+});
