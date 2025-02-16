@@ -61,4 +61,3 @@ This project is a Chrome extension that enhances the LinkedIn user experience by
 
 ## Conclusion
 This project integrates **browser-based ML inference with an end-to-end MLOps pipeline** for a robust, scalable solution to improve LinkedIn's user experience.
-

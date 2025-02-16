@@ -1,35 +1,40 @@
 {
   "manifest_version": 3,
-  "name": "LinkedIn Sanity Filter",
+  "name": "LinkedIn Brag Filter",
   "version": "1.0",
-  "description": "Hides brag posts and work history on LinkedIn.",
-  "permissions": ["scripting", "storage", "webNavigation", "alarms", "commands", "tabs"],
-  "host_permissions": ["https://www.linkedin.com/*"],
+  "description": "Filters out brag posts and hides profile experiences on LinkedIn to promote a healthier social media experience.",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": [
+        "libs/anime.min.js",
+        "libs/nlp_model.js",
+        "content-scripts/filter.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
   },
-  "content_scripts": [
-    {
-      "matches": ["*://www.linkedin.com/*"],
-      "js": ["content.js"],
-      "css": ["styles.css"],
-      "run_at": "document_idle"
-    }
-  ],
-  "commands": {
-    "reload": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+R"
-      },
-      "description": "Reload the extension"
-    }
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }

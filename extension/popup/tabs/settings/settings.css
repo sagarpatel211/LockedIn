@@ -1,0 +1,8 @@
+.settings-container {
+  padding: 10px;
+}
+
+.settings-container label {
+  display: block;
+  margin: 10px 0;
+}

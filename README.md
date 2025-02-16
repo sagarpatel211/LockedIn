@@ -3,6 +3,10 @@ Wanna use Linkedin without feeling like sh*t?
 
 Chat for help on how to structure chrome extensions:
 https://chatgpt.com/share/67a937ac-f280-8011-9119-8abe919d2f5e
+https://chatgpt.com/c/67b1801c-f1a4-8011-b81c-eded95b744a6?model=o1
+
+## TO DO
+- add github workflow for chrome extension
 
 ## 📌 Overview
 LinkedIn Sanity is a **Chrome extension** that enhances the LinkedIn experience by:
