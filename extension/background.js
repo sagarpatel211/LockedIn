@@ -1,6 +1,3 @@
-// background.js
-
-// Import the context menu code
 importScripts("content-scripts/context_menu.js");
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -8,7 +5,5 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === "debug") {
-    console.log("LockedIn Debug Log:", message.data);
-  }
+  console.log("LockedIn Debug Log:", message.data);
 });
