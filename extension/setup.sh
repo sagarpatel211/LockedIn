@@ -24,7 +24,8 @@ echo "Building app..."
 npm run build
 
 echo "Copying build files..."
-cp -r build/static ../static
+rm -rf ../static
+cp -r build/static ../
 cp build/index.html ../popup.html
 
 echo "Done! Reload your extension."

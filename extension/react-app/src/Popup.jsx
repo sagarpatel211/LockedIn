@@ -20,7 +20,18 @@ function TabButton({ label, isActive, onClick }) {
         <motion.div
           className="absolute left-1/2 -bottom-1 h-1 w-2 bg-white rounded-full"
           layoutId="underline"
-          animate={{ x: "-50%" }}
+          initial={{ scaleX: 0.8 }}
+          animate={{ x: "-50%", scaleX: 1.2 }}
+          transition={{ type: "spring", stiffness: 300, damping: 15 }}
+        />
+      )}
+      {isActive && (
+        <motion.div
+          className="absolute inset-0 bg-white opacity-20 rounded-lg"
+          layoutId="highlight"
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.2 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
         />
       )}
     </button>
@@ -29,12 +40,19 @@ function TabButton({ label, isActive, onClick }) {
 
 function TabContent({ tab }) {
   return (
-    <div className="p-4">
+    <motion.div
+      className="p-4"
+      key={tab}
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
       {tab === 0 && <Home />}
       {tab === 1 && <Stats />}
       {tab === 2 && <Settings />}
       {tab === 3 && <Donate />}
-    </div>
+    </motion.div>
   );
 }
 
@@ -45,7 +63,12 @@ function Popup() {
     <div className="w-[600px] h-[400px] bg-black text-white p-4">
       <div className="flex border-b border-gray-700 relative">
         {tabs.map((label, index) => (
-          <TabButton key={index} label={label} isActive={tab === index} onClick={() => setTab(index)} />
+          <TabButton
+            key={index}
+            label={label}
+            isActive={tab === index}
+            onClick={() => setTab(index)}
+          />
         ))}
       </div>
       <TabContent tab={tab} />
