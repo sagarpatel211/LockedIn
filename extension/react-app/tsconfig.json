@@ -14,11 +14,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "types": ["chrome"],
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["*"],
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["lib/*"],
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/lib/*": ["src/lib/*"]
     }
   },
   "include": ["src"]

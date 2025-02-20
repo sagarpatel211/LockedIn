@@ -1,7 +1,6 @@
 @echo off
 echo Setting up Chrome extension and React...
 
-:: Change to the directory containing this script
 cd /d "%~dp0" || (echo ERROR: Failed to navigate to script directory & exit /b 1)
 
 if not exist "react-app\package.json" (
@@ -11,7 +10,6 @@ if not exist "react-app\package.json" (
 
 cd react-app || exit /b 1
 
-:: Check if Node.js is installed
 where node >nul 2>nul
 if %errorlevel% neq 0 (
     echo ERROR: Node.js not installed.
@@ -24,8 +22,8 @@ if not exist "node_modules" (
 )
 
 echo.
-pause
 echo Building app...
+call npm run format || (echo ERROR: Format failed & exit /b 1)
 call npm run build || (echo ERROR: Build failed & exit /b 1)
 
 if not exist "build" (

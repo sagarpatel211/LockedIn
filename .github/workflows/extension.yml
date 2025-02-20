@@ -1,0 +1,46 @@
+name: Build Extension
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm run test
+
+      - name: Build Extension
+        run: npm run build
+
+      - name: Package Extension
+        run: |
+          mkdir -p dist
+          zip -r dist/chrome-extension.zip build/*
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: chrome-extension
+          path: dist/chrome-extension.zip
