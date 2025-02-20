@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 // import * as Sentry from "@sentry/react";
 import Donate from "@/components/screens/donate";
 import Home from "@/components/screens/home";
@@ -46,19 +46,24 @@ const TabButton = ({ label, isActive, onClick }: TabButtonProps) => (
 );
 
 const TabContent = ({ tab }: TabContentProps) => {
+  const content = useMemo(() => {
+    return [
+      <Home key="home" />,
+      <Stats key="stats" />,
+      <Settings key="settings" />,
+      <Donate key="donate" />,
+    ];
+  }, []);
+
   return (
     <motion.div
       className="p-4 grid gap-4 grid-cols-2 transition-all"
-      key={tab}
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -20 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
-      {tab === 0 && <Home />}
-      {tab === 1 && <Stats />}
-      {tab === 2 && <Settings />}
-      {tab === 3 && <Donate />}
+      {content[tab]}
     </motion.div>
   );
 };
