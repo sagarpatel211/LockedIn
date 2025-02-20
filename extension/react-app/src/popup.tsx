@@ -1,38 +1,27 @@
-import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Home from "./components/screens/home";
-import Stats from "./components/screens/stats";
-import Settings from "./components/screens/settings";
-import Donate from "./components/screens/donate";
+import { ThemeProvider, useTheme } from "next-themes";
+import React, { useState, useEffect } from "react";
+import Donate from "@/components/screens/donate";
+import Home from "@/components/screens/home";
+import Settings from "@/components/screens/settings";
+import Stats from "@/components/screens/stats";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
 
-const tabs: string[] = ["Home", "Stats", "Settings", "Donate"];
+const tabs = ["Home", "Stats", "Settings", "Donate"];
 
-interface TabButtonProps {
-  label: string;
-  isActive: boolean;
-  onClick: () => void;
-}
-
-const TabButton: React.FC<TabButtonProps> = ({ label, isActive, onClick }) => (
+const TabButton = ({ label, isActive, onClick }) => (
   <button
-    className={`relative flex-1 p-2 text-center transition-colors ${
-      isActive ? "text-white" : "text-gray-400"
+    className={`relative flex-1 p-3 text-center transition-colors rounded-lg ${
+      isActive ? "bg-primary text-white" : "text-gray-500"
     }`}
     onClick={onClick}
   >
     {label}
     {isActive && (
       <motion.div
-        className="absolute left-1/2 -bottom-1 h-1 w-2 bg-white rounded-full"
-        layoutId="underline"
-        initial={{ scaleX: 0.8 }}
-        animate={{ x: "-50%", scaleX: 1.2 }}
-        transition={{ type: "spring", stiffness: 300, damping: 15 }}
-      />
-    )}
-    {isActive && (
-      <motion.div
-        className="absolute inset-0 bg-white opacity-20 rounded-lg"
+        className="absolute inset-0 bg-primary opacity-20 rounded-lg"
         layoutId="highlight"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 0.2 }}
@@ -42,14 +31,10 @@ const TabButton: React.FC<TabButtonProps> = ({ label, isActive, onClick }) => (
   </button>
 );
 
-interface TabContentProps {
-  tab: number;
-}
-
-const TabContent: React.FC<TabContentProps> = ({ tab }) => {
+const TabContent = ({ tab }) => {
   return (
     <motion.div
-      className="p-4"
+      className="p-4 grid gap-4 grid-cols-2"
       key={tab}
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
@@ -64,12 +49,37 @@ const TabContent: React.FC<TabContentProps> = ({ tab }) => {
   );
 };
 
-const Popup: React.FC = () => {
-  const [tab, setTab] = useState<number>(0);
+const BentoBoard = () => (
+  <div className="grid grid-cols-2 gap-4 p-4">
+    <Card>
+      <CardContent className="p-4">📊 Quick Stats</CardContent>
+    </Card>
+    <Card>
+      <CardContent className="p-4">⚙️ Settings Overview</CardContent>
+    </Card>
+    <Card>
+      <CardContent className="p-4">💡 Tips & Insights</CardContent>
+    </Card>
+    <Card>
+      <CardContent className="p-4">❤️ Donate & Support</CardContent>
+    </Card>
+  </div>
+);
+
+const Popup = () => {
+  const [tab, setTab] = useState(0);
+  const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
-    <div className="bg-black text-white p-4">
-      <div className="flex relative border-b border-gray-700">
+    <div className="p-6 rounded-lg bg-background shadow-lg">
+      <div className="flex border-b border-gray-300 mb-4 gap-2">
         {tabs.map((label, index) => (
           <TabButton
             key={index}
@@ -79,9 +89,27 @@ const Popup: React.FC = () => {
           />
         ))}
       </div>
+      {tab === 2 && (
+        <div className="flex justify-between items-center p-4 border rounded-lg bg-muted">
+          <span>Dark Mode</span>
+          <Switch
+            checked={theme === "dark"}
+            onCheckedChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+          />
+        </div>
+      )}
+      <BentoBoard />
       <TabContent tab={tab} />
     </div>
   );
 };
 
-export default Popup;
+const App = () => {
+  return (
+    <ThemeProvider attribute="class">
+      <Popup />
+    </ThemeProvider>
+  );
+};
+
+export default App;

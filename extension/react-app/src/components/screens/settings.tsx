@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
+import React, { useState, useEffect } from "react";
 
 function Settings() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,7 +31,11 @@ function Settings() {
         onClick={toggleDarkMode}
         className="mt-4 p-2 rounded-full bg-gray-200 dark:bg-gray-800"
       >
-        {darkMode ? <Sun className="w-6 h-6 text-yellow-400" /> : <Moon className="w-6 h-6 text-gray-600" />}
+        {darkMode ? (
+          <Sun className="w-6 h-6 text-yellow-400" />
+        ) : (
+          <Moon className="w-6 h-6 text-gray-600" />
+        )}
       </button>
     </div>
   );
