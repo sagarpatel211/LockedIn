@@ -1,109 +1,99 @@
-import { motion } from "framer-motion";
-import React, { useState, useEffect, useMemo } from "react";
-// import * as Sentry from "@sentry/react";
-import Donate from "@/components/screens/donate";
+"use client";
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { HomeIcon, ChartBarIcon, CogIcon } from "@heroicons/react/24/outline";
 import Home from "@/components/screens/home";
 import Settings from "@/components/screens/settings";
 import Stats from "@/components/screens/stats";
+import type { JSX } from "react/jsx-runtime";
 import { ThemeProvider } from "next-themes";
 
-// Sentry.init({
-//   dsn: "YOUR_SENTRY_DSN_HERE",
-//   integrations: [new Sentry.BrowserTracing()],
-//   tracesSampleRate: 1.0,
-// });
+const tabs = [
+  { icon: <HomeIcon className="w-6 h-6" />, component: <Home key="home" />, label: "Home" },
+  { icon: <ChartBarIcon className="w-6 h-6" />, component: <Stats key="stats" />, label: "Stats" },
+  {
+    icon: <CogIcon className="w-6 h-6" />,
+    component: <Settings key="settings" />,
+    label: "Settings",
+  },
+];
 
-interface TabContentProps {
-  tab: number;
-}
-
-interface TabButtonProps {
-  label: string;
+const TabButton = ({
+  icon,
+  isActive,
+  onClick,
+  label,
+}: {
+  icon: JSX.Element;
   isActive: boolean;
   onClick: () => void;
-}
-
-const tabs = ["Home", "Stats", "Settings", "Donate"];
-
-const TabButton = ({ label, isActive, onClick }: TabButtonProps) => (
+  label: string;
+}) => (
   <button
-    className={`relative flex-1 p-3 text-center transition-colors rounded-lg ${
-      isActive ? "bg-primary text-white" : "text-gray-500"
+    className={`relative flex-1 p-3 flex flex-col items-center transition-colors ${
+      isActive ? "text-blue-500" : "text-gray-400"
     }`}
     onClick={onClick}
   >
-    {label}
+    {icon}
+    <span className="text-xs mt-1">{label}</span>
     {isActive && (
       <motion.div
-        className="absolute inset-0 bg-primary opacity-20 rounded-lg"
-        layoutId="highlight"
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.2 }}
+        className="absolute bottom-0 h-1 w-6 bg-blue-500 rounded-full"
+        layoutId="underline"
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       />
     )}
   </button>
 );
 
-const TabContent = ({ tab }: TabContentProps) => {
-  const content = useMemo(() => {
-    return [
-      <Home key="home" />,
-      <Stats key="stats" />,
-      <Settings key="settings" />,
-      <Donate key="donate" />,
-    ];
-  }, []);
-
-  return (
-    <motion.div
-      className="p-4 grid gap-4 grid-cols-2 transition-all"
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -20 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-    >
-      {content[tab]}
-    </motion.div>
-  );
-};
-
 const Popup = () => {
   const [tab, setTab] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    // Sentry.captureMessage("Popup mounted");
-  }, []);
-
-  if (!mounted) return null;
 
   return (
-    <div className="p-6 rounded-lg bg-background shadow-lg relative w-[500px] h-[500px]">
-      <div className="flex border-b border-gray-300 mb-4 gap-2">
-        {tabs.map((label, index) => (
-          <TabButton
-            key={index}
-            label={label}
-            isActive={tab === index}
-            onClick={() => setTab(index)}
-          />
-        ))}
+    <div className="relative w-[400px] h-[600px]">
+      {/* Background blur */}
+      <div className="absolute inset-x-0 m-auto h-80 max-w-lg bg-gradient-to-tr from-indigo-600 via-teal-950 to-[#9333EA] blur-[118px]"></div>
+
+      {/* Content */}
+      <div className="relative bg-slate-950/60 backdrop-blur-xl shadow-lg w-full h-full flex flex-col overflow-hidden border border-slate-800">
+        <div className="flex-grow p-6 relative z-10 overflow-auto">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={tab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="h-full"
+            >
+              {tabs[tab].component}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        <div className="relative z-10 bg-slate-900/60 backdrop-blur-md shadow-lg p-2 flex justify-around">
+          {tabs.map((item, index) => (
+            <TabButton
+              key={index}
+              icon={item.icon}
+              isActive={tab === index}
+              onClick={() => setTab(index)}
+              label={item.label}
+            />
+          ))}
+        </div>
       </div>
-      <TabContent tab={tab} />
     </div>
   );
 };
 
-const App = () => {
+export default function App() {
   return (
-    <ThemeProvider attribute="class">
-      {/* <Sentry.ErrorBoundary fallback={<p>Something went wrong.</p>}> */}
-      <Popup />
-      {/* </Sentry.ErrorBoundary> */}
+    <ThemeProvider attribute="class" defaultTheme="dark">
+      <div className="bg-slate-900 text-slate-400">
+        <Popup />
+      </div>
     </ThemeProvider>
   );
-};
-
-export default App;
+}

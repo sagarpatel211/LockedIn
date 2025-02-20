@@ -1,0 +1,17 @@
+stages:
+  fetch_data:
+    cmd: python3 nlp-model/training/fetch_data.py
+    outs:
+      - nlp-model/data/dataset.csv
+  train:
+    cmd: python3 nlp-model/training/train.py
+    deps:
+      - nlp-model/data/dataset.csv
+    outs:
+      - nlp-model/model.onnx
+      - nlp-model/model.pth
+  test:
+    cmd: python3 nlp-model/training/test.py
+    deps:
+      - nlp-model/data/dataset.csv
+      - nlp-model/model.pth

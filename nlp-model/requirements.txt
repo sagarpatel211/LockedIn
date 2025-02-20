@@ -1,0 +1,7 @@
+torch
+mlflow
+tensorboard
+onnx
+scikit-learn
+pandas
+numpy

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/spate275-local/Downloads/personal/LockedIn/nlp-model/training/mlruns/0/386833477605453c98c1a8e508cc66ad/artifacts
+end_time: 1740089114876
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 386833477605453c98c1a8e508cc66ad
+run_name: NLP_Model_Training
+run_uuid: 386833477605453c98c1a8e508cc66ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740089114855
+status: 3
+tags: []
+user_id: spate275-local
