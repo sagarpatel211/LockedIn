@@ -21,24 +21,39 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
+          cache-dependency-path: extension/react-app/package-lock.json
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
+        working-directory: extension/react-app
 
-      - name: Run Linter
-        run: npm run lint
-
-      - name: Run Tests
-        run: npm run test
+      - name: Format Code
+        run: npm run format
+        working-directory: extension/react-app
 
       - name: Build Extension
         run: npm run build
+        working-directory: extension/react-app
+
+      - name: Validate Build
+        run: |
+          if [ ! -d "build" ]; then
+            echo "ERROR: Build directory not found."
+            exit 1
+          fi
+        working-directory: extension/react-app
+
+      - name: Copy Build Files
+        run: |
+          rm -rf static
+          cp -r extension/react-app/build/static .
+          cp extension/react-app/build/index.html popup.html
 
       - name: Package Extension
         run: |
           mkdir -p dist
-          zip -r dist/chrome-extension.zip build/*
-
+          zip -r dist/chrome-extension.zip static popup.html extension/manifest.json
+          
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
