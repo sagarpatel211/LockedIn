@@ -1,73 +1,80 @@
 "use client";
 
-import React, { useState } from "react";
-import { Switch } from "@/components/ui/switch";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Sun, Moon } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import ThemeToggle from "@/components/ui/themetoggle";
+import ToggleOption from "@/components/ui/toggleoption";
+import KeywordTags from "@/components/ui/keywordtags";
+import ResetStatisticsButton from "@/components/ui/resetstats";
+
+interface Tag {
+  id: number;
+  text: string;
+  color: string;
+}
+
+interface SettingsData {
+  darkMode: boolean;
+  hideExperiences: boolean;
+  hideBragPosts: boolean;
+  hideSidebar: boolean;
+  filterKeywords: Tag[];
+}
 
 const Settings = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [hideExperiences, setHideExperiences] = useState(false);
-  const [hideBragPosts, setHideBragPosts] = useState(false);
-  const [hideSidebar, setHideSidebar] = useState(false);
-  const [filterKeywords, setFilterKeywords] = useState("");
+  const [settings, setSettings] = useState<SettingsData>({
+    darkMode: false,
+    hideExperiences: false,
+    hideBragPosts: false,
+    hideSidebar: false,
+    filterKeywords: [],
+  });
 
-  const handleResetStatistics = () => {
-    // Implement reset statistics logic here
-    console.log("Statistics reset");
+  useEffect(() => {
+    chrome.storage.sync.get(["settings"], (data) => {
+      if (data.settings) {
+        setSettings({
+          ...data.settings,
+          filterKeywords: data.settings.filterKeywords ?? [],
+        });
+      }
+    });
+  }, []);
+
+  const updateSetting = (key: keyof SettingsData, value: boolean | Tag[]) => {
+    const newSettings = { ...settings, [key]: value };
+    setSettings(newSettings);
+    chrome.storage.sync.set({ settings: newSettings });
   };
 
   return (
-    <div className="h-full overflow-y-auto px-4 py-6 space-y-6">
-      <h1 className="text-3xl font-bold mb-6">
-        <span className="bg-gradient-to-r from-blue-500 to-[#E114E5] bg-clip-text text-transparent">
-          Settings
-        </span>
-      </h1>
-
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <Label htmlFor="dark-mode" className="flex items-center space-x-2">
-            <span>{darkMode ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}</span>
-            <span>Dark Mode</span>
-          </Label>
-          <Switch id="dark-mode" checked={darkMode} onCheckedChange={setDarkMode} />
-        </div>
-
-        <div className="flex items-center justify-between">
-          <Label htmlFor="hide-experiences">Hide Profile Experiences</Label>
-          <Switch
-            id="hide-experiences"
-            checked={hideExperiences}
-            onCheckedChange={setHideExperiences}
-          />
-        </div>
-
-        <div className="flex items-center justify-between">
-          <Label htmlFor="hide-brag-posts">Hide Brag Posts</Label>
-          <Switch id="hide-brag-posts" checked={hideBragPosts} onCheckedChange={setHideBragPosts} />
-        </div>
-
-        <div className="flex items-center justify-between">
-          <Label htmlFor="hide-sidebar">Hide Sidebar</Label>
-          <Switch id="hide-sidebar" checked={hideSidebar} onCheckedChange={setHideSidebar} />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="filter-keywords">Custom Filter Keywords</Label>
-          <Input
-            id="filter-keywords"
-            placeholder="Enter keywords separated by commas"
-            value={filterKeywords}
-            onChange={(e) => setFilterKeywords(e.target.value)}
-          />
-        </div>
-
-        <Button variant="destructive" className="w-full" onClick={handleResetStatistics}>
-          Reset Statistics
-        </Button>
+    <div>
+      <h2 className="text-2xl font-semibold">Settings</h2>
+      <p>Here you can customize the extension!</p>
+      <div className="space-y-4 mt-5">
+        <ThemeToggle />
+        <ToggleOption
+          id="hide-experiences"
+          label="Hide Profile Experiences"
+          checked={settings.hideExperiences}
+          onChange={(checked) => updateSetting("hideExperiences", checked)}
+        />
+        <ToggleOption
+          id="hide-brag-posts"
+          label="Hide Brag Posts"
+          checked={settings.hideBragPosts}
+          onChange={(checked) => updateSetting("hideBragPosts", checked)}
+        />
+        <ToggleOption
+          id="hide-sidebar"
+          label="Hide Sidebar"
+          checked={settings.hideSidebar}
+          onChange={(checked) => updateSetting("hideSidebar", checked)}
+        />
+        <KeywordTags
+          keywords={settings.filterKeywords}
+          onUpdate={(keywords) => updateSetting("filterKeywords", keywords)}
+        />
+        <ResetStatisticsButton />
       </div>
     </div>
   );

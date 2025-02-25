@@ -32,7 +32,7 @@ const TabButton = ({
 }) => (
   <button
     className={`relative flex-1 p-3 flex flex-col items-center transition-colors ${
-      isActive ? "text-blue-500" : "text-gray-400"
+      isActive ? "text-gray-900 dark:text-gray-100" : "text-gray-500 dark:text-gray-400"
     }`}
     onClick={onClick}
   >
@@ -40,7 +40,7 @@ const TabButton = ({
     <span className="text-xs mt-1">{label}</span>
     {isActive && (
       <motion.div
-        className="absolute bottom-0 h-1 w-6 bg-blue-500 rounded-full"
+        className="absolute bottom-0 h-1 w-6 bg-gray-900 dark:bg-gray-100 rounded-full"
         layoutId="underline"
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       />
@@ -52,12 +52,9 @@ const Popup = () => {
   const [tab, setTab] = useState(0);
 
   return (
-    <div className="relative w-[400px] h-[600px]">
-      {/* Background blur */}
-      <div className="absolute inset-x-0 m-auto h-80 max-w-lg bg-gradient-to-tr from-indigo-600 via-teal-950 to-[#9333EA] blur-[118px]"></div>
-
-      {/* Content */}
-      <div className="relative bg-slate-950/60 backdrop-blur-xl shadow-lg w-full h-full flex flex-col overflow-hidden border border-slate-800">
+    <div className="relative w-[400px] h-[500px]">
+      <div className="absolute inset-x-0 m-auto h-80 max-w-lg bg-gray-50/30 dark:bg-gray-950/30 blur-[118px]"></div>
+      <div className="relative bg-gray-50/20 dark:bg-gray-950/80 backdrop-blur-3xl shadow-lg w-full h-full flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700 rounded-lg">
         <div className="flex-grow p-6 relative z-10 overflow-auto">
           <AnimatePresence mode="wait">
             <motion.div
@@ -72,7 +69,7 @@ const Popup = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-        <div className="relative z-10 bg-slate-900/60 backdrop-blur-md shadow-lg p-2 flex justify-around">
+        <div className="relative z-10 bg-gray-50/30 dark:bg-gray-950/70 backdrop-blur-md shadow-lg p-2 flex justify-around">
           {tabs.map((item, index) => (
             <TabButton
               key={index}
@@ -91,7 +88,7 @@ const Popup = () => {
 export default function App() {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
-      <div className="bg-slate-900 text-slate-400">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
         <Popup />
       </div>
     </ThemeProvider>
