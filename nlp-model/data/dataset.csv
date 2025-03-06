@@ -99,3 +99,403 @@ id,text,label
 98,"Another speaking engagement booked! Thankful for this journey!",1
 99,"Excited to embark on this incredible adventure in the startup world!",1
 100,"Celebrating 5 years of being a digital nomad—best decision ever!",1
+101,"Excited to share that I’ve joined the leadership team at a Fortune 500 company!",1
+102,"Honored to be recognized as Employee of the Year!",1
+103,"I’m thrilled to be starting my new role as a Senior Analyst at JP Morgan!",1
+104,"Beyond grateful to have received the Innovator of the Year award!",1
+105,"Humbled to be featured in the Top 100 Entrepreneurs list!",1
+106,"A dream come true! I’ve launched my own AI startup!",1
+107,"From intern to Director—what a journey it has been!",1
+108,"Just got my first million-dollar investment! Exciting times ahead!",1
+109,"I’m beyond excited to be part of a cutting-edge tech team at Microsoft!",1
+110,"So proud to be joining the advisory board of a game-changing startup!",1
+111,"Happy to share that I’ll be mentoring young professionals in my industry!",1
+112,"From side hustle to full-time CEO—this is just the beginning!",1
+113,"I’m incredibly honored to be selected as a keynote speaker at a global event!",1
+114,"Breaking barriers: I’m now the youngest VP at my firm!",1
+115,"Proud to announce that I’m now leading a multi-million dollar project!",1
+116,"Humbled to be chosen for an exclusive leadership fellowship!",1
+117,"Excited to be working on next-gen AI models at OpenAI!",1
+118,"Happy to share that I’ve joined the world of venture capital!",1
+119,"My research paper was just accepted into a top-tier conference!",1
+120,"From idea to reality—our startup is officially launching today!",1
+121,"Feeling incredibly lucky to have closed my biggest deal yet!",1
+122,"Can’t believe I made it! Joining the Forbes Council is a dream come true!",1
+123,"Excited to start my role as an Investment Associate at BlackRock!",1
+124,"After years of hard work, I’m finally in my dream role!",1
+125,"So proud to have built a startup that is changing lives!",1
+126,"Big news: I’ve been invited to speak at Harvard!",1
+127,"Thrilled to be joining the AI research team at DeepMind!",1
+128,"What an incredible journey—just accepted into Y Combinator!",1
+129,"Grateful for this opportunity to be a leadership coach for executives!",1
+130,"From broke college grad to successful entrepreneur—hard work pays off!",1
+131,"Honored to be part of an elite group of thought leaders!",1
+132,"Another milestone reached! Just filed a patent for my latest invention!",1
+133,"Feeling blessed to be featured on the cover of a major magazine!",1
+134,"So humbled to have my work published in a prestigious journal!",1
+135,"Excited to share that I’ll be leading a global expansion project!",1
+136,"Proud to be listed as one of the top 10 voices in my industry!",1
+137,"Just signed a book deal! Can’t wait to share my insights with the world!",1
+138,"What an amazing opportunity—joining the World Economic Forum as a speaker!",1
+139,"Excited to lead the development of a groundbreaking tech solution!",1
+140,"A huge career step: I’m now a senior consultant at McKinsey!",1
+141,"So excited to be an advisor for an incredible startup!",1
+142,"Joining the board of directors for a non-profit I deeply believe in!",1
+143,"Beyond thrilled to have my startup featured in TechCrunch!",1
+144,"Hard work, grit, and resilience led me to this moment!",1
+145,"Finally achieved my lifelong goal—just became a Partner at my firm!",1
+146,"My work is making an impact! Excited to launch my own foundation!",1
+147,"I’m officially a TEDx speaker! Can't wait to share my story!",1
+148,"So happy to announce my startup has expanded internationally!",1
+149,"Excited to bring my expertise to a Fortune 100 company!",1
+150,"Biggest career move yet—I’m now a Chief Product Officer!",1
+151,"Humbled to have been invited to collaborate with world-class researchers!",1
+152,"Proud to be leading a $100M fundraising round for a game-changing startup!",1
+153,"Thrilled to be mentoring the next generation of entrepreneurs!",1
+154,"Can’t believe I’m saying this—my work just won an industry award!",1
+155,"I’m officially a part of the Silicon Valley elite—what a ride!",1
+156,"Finally launching my passion project—my own leadership academy!",1
+157,"Excited to take on a leadership role in an impact-driven organization!",1
+158,"After years of dedication, I’ve been appointed as a company director!",1
+159,"Joining a venture capital firm has always been my goal—excited for the journey!",1
+160,"So honored to have received the Entrepreneur of the Year award!",1
+161,"Another major career milestone—now an executive at a global firm!",1
+162,"Excited to share my insights as a guest lecturer at Stanford!",1
+163,"From startup founder to angel investor—so grateful for this journey!",1
+164,"Excited to bring AI innovation to the healthcare sector!",1
+165,"Grateful to be leading a diversity and inclusion initiative at my company!",1
+166,"Another day, another major partnership secured—huge win for our company!",1
+167,"Thrilled to be shaping policy in the tech industry as an advisor!",1
+168,"Looking forward to making an impact as a sustainability consultant!",1
+169,"Can’t believe I’m an official ambassador for a major brand!",1
+170,"So excited to have raised a $50M funding round for our startup!",1
+171,"Feeling incredibly grateful to be leading a research team at NASA!",1
+172,"Finally taking the leap—launching my own VC fund!",1
+173,"Just hit a career milestone—leading a global expansion at my company!",1
+174,"What an honor to be recognized as a top voice in AI ethics!",1
+175,"So proud to have built a company that’s changing the industry!",1
+176,"A big step forward—taking on a leadership role at a unicorn startup!",1
+177,"Excited to be on a panel with some of the biggest names in business!",1
+178,"Finally achieving financial freedom—excited for what’s next!",1
+179,"Beyond grateful to be named one of the top 40 under 40!",1
+180,"Officially launching my online course to empower young professionals!",1
+181,"Honored to be leading an initiative that’s changing lives!",1
+182,"Another step toward my mission—launching a nonprofit foundation!",1
+183,"Can’t wait to shape the future of AI ethics as an industry leader!",1
+184,"Thrilled to be taking on a global strategy role at my company!",1
+185,"Humbled to be recognized as an innovator in my field!",1
+186,"From small-town dreamer to global speaker—so grateful!",1
+187,"Excited to kick off my new career as an AI ethics consultant!",1
+188,"So proud to be an official Forbes contributor!",1
+189,"Taking a major step—moving to Silicon Valley to work at a top tech firm!",1
+190,"Humbled to have received a lifetime achievement award!",1
+191,"Excited to be an advisor on groundbreaking AI projects!",1
+192,"From struggling freelancer to six-figure consultant—dreams do come true!",1
+193,"Another big move—joining the UN as a technology policy expert!",1
+194,"Excited to have my work featured in a bestselling book!",1
+195,"So proud to be working on social impact initiatives globally!",1
+196,"Another bucket list item checked off—speaking at SXSW!",1
+197,"Joining an elite leadership program that will shape my future!",1
+198,"Excited to be leading a mission-driven startup that’s creating change!",1
+199,"After years of building, my startup is now valued at $1B!",1
+200,"So honored to be shaping the future of education with my new role!",1
+201,"Can’t wait to start my role as a chief strategist in a leading firm!",1
+202,"Excited to share that I’ve accepted a Software Engineering Internship at Google this summer!",1
+203,"Proud to announce that I will be joining Microsoft as a Software Engineering Intern!",1
+204,"Happy to share that I’ll be interning at Amazon as a Software Engineer!",1
+205,"Thrilled to announce that I’ve landed a Software Engineering Internship at Meta!",1
+206,"I’m incredibly excited to start my journey as a Software Engineering Intern at Apple!",1
+207,"Honored to have been selected for a Software Engineering Internship at Tesla!",1
+208,"Beyond grateful to be joining LinkedIn as a Software Engineering Intern!",1
+209,"Can’t believe I made it! I’ll be interning at NVIDIA as a Software Engineer!",1
+210,"Excited to kick off my Software Engineering Internship at Airbnb this summer!",1
+211,"Grateful for the opportunity to intern at Stripe as a Software Engineer!",1
+212,"I’m thrilled to announce that I’ll be joining Uber as a Software Engineering Intern!",1
+213,"Proud to be a Software Engineering Intern at DoorDash this upcoming term!",1
+214,"I’m excited to start my Software Engineering Internship at Reddit!",1
+215,"Feeling incredibly lucky to intern at Palantir as a Software Engineer!",1
+216,"Beyond grateful to be interning at Snap Inc. as a Software Engineer!",1
+217,"Excited to work on cutting-edge technology as a Software Engineering Intern at SpaceX!",1
+218,"Happy to announce that I’ve accepted a Software Engineering Internship at IBM!",1
+219,"Thank you to the amazing recruiting team at Google for this Software Engineering Internship opportunity!",1
+220,"Excited to announce that I’ll be interning at Robinhood as a Software Engineer!",1
+221,"Happy to share that I’ll be a Software Engineering Intern at Intel this summer!",1
+222,"Proud to announce that I will be joining Zoom as a Software Engineering Intern!",1
+223,"Grateful for the chance to intern at Atlassian as a Software Engineer!",1
+224,"So excited to start my Software Engineering Internship at Twitter!",1
+225,"Big thanks to the recruiting team at Meta for this amazing internship opportunity!",1
+226,"Proud to be joining Microsoft’s Software Engineering Internship program!",1
+227,"Excited to announce that I’ll be working as a Software Engineering Intern at Adobe!",1
+228,"Can’t wait to start my Software Engineering Internship at Salesforce!",1
+229,"Beyond thrilled to have received an offer for a Software Engineering Internship at Shopify!",1
+230,"Excited to be interning at Square as a Software Engineer this summer!",1
+231,"Happy to announce that I’ll be joining Bloomberg as a Software Engineering Intern!",1
+232,"Thank you to the recruiters at Uber for making this internship possible!",1
+233,"Feeling blessed to be interning at Pinterest as a Software Engineer!",1
+234,"Excited to contribute as a Software Engineering Intern at Lyft!",1
+235,"Thrilled to announce that I’ll be interning at TikTok as a Software Engineer!",1
+236,"So proud to be part of the Software Engineering Internship program at Cisco!",1
+237,"Can’t wait to start working on exciting projects at Instacart as a Software Engineering Intern!",1
+238,"Excited to announce my Software Engineering Internship at Dropbox!",1
+239,"I’m incredibly thankful to have received an offer from Robinhood for a Software Engineering Internship!",1
+240,"Looking forward to my Software Engineering Internship at Snapchat!",1
+241,"Big news: I’ll be interning at Reddit as a Software Engineer!",1
+242,"Beyond grateful for the chance to join TikTok as a Software Engineering Intern!",1
+243,"Excited to be working with amazing engineers this summer at Zoom!",1
+244,"Proud to be interning at Coursera as a Software Engineer!",1
+245,"Honored to be selected as a Software Engineering Intern at Netflix!",1
+246,"Feeling incredibly lucky to be part of IBM’s Software Engineering Internship program!",1
+247,"Huge thanks to the recruiters at Google for believing in me!",1
+248,"I’m beyond excited to be interning at Twitter as a Software Engineer!",1
+249,"A dream come true—starting my Software Engineering Internship at Slack!",1
+250,"Proud to be joining GitHub as a Software Engineering Intern!",1
+251,"Excited for this next chapter as a Software Engineering Intern at HubSpot!",1
+252,"Honored to be working at Facebook Reality Labs as a Software Engineering Intern!",1
+253,"Looking forward to my upcoming Software Engineering Internship at ASML!",1
+254,"Beyond grateful to be interning at Tesla’s Autopilot Software Engineering team!",1
+255,"Excited to announce that I’ll be joining Qualcomm as a Software Engineering Intern!",1
+256,"Big thanks to the recruiters at Palantir for this opportunity!",1
+257,"Excited to start my Software Engineering Internship at AWS!",1
+258,"Proud to be interning at Intel’s Software Development Group!",1
+259,"Feeling incredibly honored to be joining Twitter’s Software Engineering Internship program!",1
+260,"I’m super excited to be working on AI projects as a Software Engineering Intern at NVIDIA!",1
+261,"So happy to be part of the Tesla internship program as a Software Engineer!",1
+262,"A huge thank you to the Stripe team for this incredible opportunity!",1
+263,"Excited to be interning at Waymo as a Software Engineer!",1
+264,"Happy to announce that I’ll be working at Bloomberg as a Software Engineering Intern!",1
+265,"Looking forward to starting my Software Engineering Internship at IBM!",1
+266,"So thrilled to be part of Google’s Software Engineering Internship program!",1
+267,"Honored to be interning at Square and learning from amazing engineers!",1
+268,"Excited to share that I’ll be working on cloud technologies at AWS!",1
+269,"So thankful to the DoorDash team for this Software Engineering Internship opportunity!",1
+270,"Happy to be part of the tech team at Airbnb as a Software Engineering Intern!",1
+271,"Beyond grateful for the mentorship I’ve received as I start my Software Engineering Internship at LinkedIn!",1
+272,"Proud to be part of an amazing engineering team at Robinhood!",1
+273,"Feeling honored to have been selected as a Software Engineering Intern at Uber!",1
+274,"Thankful to be interning at Dropbox and working on real-world problems!",1
+275,"Excited to explore machine learning as a Software Engineering Intern at TikTok!",1
+276,"Super excited to start my Software Engineering Internship at Tesla!",1
+277,"Honored to have received an offer from Google for my summer internship!",1
+278,"Beyond thrilled to be part of Microsoft’s AI research team as an intern!",1
+279,"So grateful to be learning from top engineers at Stripe this summer!",1
+280,"Happy to share that I’ll be joining Reddit’s Software Engineering Internship program!",1
+281,"A huge milestone—joining Meta as a Software Engineering Intern!",1
+282,"Feeling incredibly lucky to have secured a Software Engineering Internship at Coinbase!",1
+283,"Excited to start my summer internship at Twilio as a Software Engineer!",1
+284,"Proud to be working at Pinterest as a Software Engineering Intern!",1
+285,"Feeling blessed to have received a Software Engineering Internship at Zoom!",1
+286,"I’m incredibly honored to be a Software Engineering Intern at Databricks!",1
+287,"Super excited to be interning at Netflix’s Software Engineering team!",1
+288,"So happy to announce my internship at Instacart as a Software Engineer!",1
+289,"Excited to start my career journey at PayPal as a Software Engineering Intern!",1
+290,"Feeling lucky to be joining Waymo as a Software Engineering Intern!",1
+291,"Proud to be interning at SAP as a Software Engineer!",1
+292,"Beyond grateful to have secured an internship at OpenAI!",1
+293,"Excited to work on cutting-edge AI at DeepMind as an intern!",1
+294,"Happy to be interning at Affirm’s Software Engineering team!",1
+295,"Can’t wait to work on fintech projects at Stripe as an intern!",1
+296,"So honored to be joining Microsoft as a Software Engineering Intern!",1
+297,"Excited to contribute to Amazon Web Services as an intern!",1
+298,"Proud to announce my summer internship at Palantir!",1
+299,"Super grateful for the chance to learn at Apple as a Software Engineering Intern!",1
+300,"Excited for my journey as a Software Engineering Intern at Facebook!",1
+301,"Excited to announce that I’ll be joining Google's Software Engineering Internship program this summer!",1
+302,"Proud to share that I’ve accepted a Software Engineering Internship at Microsoft!",1
+303,"Grateful for the opportunity to intern at Amazon as a Software Engineer!",1
+304,"I’m thrilled to be starting my Software Engineering Internship at Meta!",1
+305,"Honored to join Apple as a Software Engineering Intern!",1
+306,"Super excited to be interning at Tesla’s Autopilot team this summer!",1
+307,"Beyond thankful to have received an offer from LinkedIn for a Software Engineering Internship!",1
+308,"Can’t wait to start my Software Engineering Internship at NVIDIA!",1
+309,"Happy to share that I’ll be interning at Airbnb as a Software Engineer!",1
+310,"Grateful to Stripe for giving me the opportunity to intern as a Software Engineer!",1
+311,"I’m thrilled to announce that I’ll be joining Uber as a Software Engineering Intern!",1
+312,"Proud to say that I will be interning at DoorDash this summer!",1
+313,"Excited to work with talented engineers as a Software Engineering Intern at Reddit!",1
+314,"Thankful for this amazing opportunity to intern at Palantir as a Software Engineer!",1
+315,"Beyond excited to start my journey at Snap Inc. as a Software Engineering Intern!",1
+316,"I’m incredibly grateful to announce that I’ll be interning at SpaceX!",1
+317,"Honored to have been selected for a Software Engineering Internship at IBM!",1
+318,"Huge thanks to the recruiters at Google for making this internship possible!",1
+319,"Excited to kick off my internship as a Software Engineer at Robinhood!",1
+320,"Happy to announce that I’ll be a Software Engineering Intern at Intel!",1
+321,"Proud to say I’ve landed a Software Engineering Internship at Zoom!",1
+322,"So excited to begin my internship at Atlassian as a Software Engineer!",1
+323,"Thrilled to have received an offer from Twitter for a Software Engineering Internship!",1
+324,"Big thanks to the Meta recruiters for this incredible opportunity!",1
+325,"I’m beyond excited to be interning at Salesforce this summer!",1
+326,"Can’t wait to work on fintech solutions as a Software Engineering Intern at Stripe!",1
+327,"Beyond grateful to be joining Bloomberg as a Software Engineering Intern!",1
+328,"Thank you to the amazing team at Uber for this wonderful internship opportunity!",1
+329,"Excited to work on cutting-edge AI as a Software Engineering Intern at Pinterest!",1
+330,"Proud to say I’ll be joining Cisco as a Software Engineering Intern!",1
+331,"Honored to be selected for TikTok’s Software Engineering Internship program!",1
+332,"Looking forward to working at Instacart as a Software Engineering Intern!",1
+333,"Excited to work on AI research as an intern at OpenAI!",1
+334,"Super grateful for this opportunity to intern at Dropbox!",1
+335,"Can’t wait to start my internship at Qualcomm as a Software Engineer!",1
+336,"Thank you to the Tesla recruiting team for making this internship possible!",1
+337,"Excited to join Waymo as a Software Engineering Intern!",1
+338,"Beyond excited to start my career journey at Netflix as a Software Engineering Intern!",1
+339,"Happy to announce that I’ll be interning at GitHub as a Software Engineer!",1
+340,"Thrilled to be learning from the best at IBM’s Software Engineering Internship program!",1
+341,"Honored to have received an offer from Zoom for my summer internship!",1
+342,"Excited to build amazing products as a Software Engineering Intern at Square!",1
+343,"Proud to share that I’ll be interning at Twitter’s AI team!",1
+344,"Feeling incredibly lucky to have received an offer from Microsoft for my internship!",1
+345,"Happy to announce that I’ll be interning at Snap Inc. this summer!",1
+346,"Excited to be joining Coursera as a Software Engineering Intern!",1
+347,"So grateful to be learning from top engineers at Airbnb!",1
+348,"Thrilled to have secured an internship at DeepMind!",1
+349,"Beyond thankful for this opportunity to work at PayPal as a Software Engineering Intern!",1
+350,"Excited to gain hands-on experience at IBM as a Software Engineering Intern!",1
+351,"Proud to be working with an amazing team at Adobe as an intern!",1
+352,"Super excited to announce that I’ll be interning at Shopify!",1
+353,"Thankful to the Amazon team for believing in me!",1
+354,"Excited to be a Software Engineering Intern at Affirm!",1
+355,"Grateful for the mentorship as I start my internship at Robinhood!",1
+356,"Feeling so lucky to be interning at Cisco!",1
+357,"Happy to be joining the security team at Palo Alto Networks as an intern!",1
+358,"Excited to contribute to groundbreaking projects at Facebook Reality Labs!",1
+359,"A huge thank you to the Tesla recruiters for this life-changing opportunity!",1
+360,"Beyond excited to be interning at SAP this summer!",1
+361,"Can’t wait to learn from the best at Stripe!",1
+362,"Thrilled to share that I’ll be a Software Engineering Intern at Zoom!",1
+363,"Happy to be working on cloud technologies as an intern at AWS!",1
+364,"Excited to be part of a great team at Square as a Software Engineering Intern!",1
+365,"Beyond grateful to be interning at Red Hat this summer!",1
+366,"So excited to start my journey at Twilio as a Software Engineer!",1
+367,"Feeling incredibly honored to be selected as an intern at Waymo!",1
+368,"Proud to be working on machine learning projects at NVIDIA!",1
+369,"Excited to be interning at Palantir’s software division!",1
+370,"Super grateful for this opportunity to work at Coinbase as an intern!",1
+371,"Can’t wait to get started on amazing fintech projects at Robinhood!",1
+372,"Excited to build secure software as a Software Engineering Intern at Zoom!",1
+373,"Happy to announce that I’ll be interning at Capital One!",1
+374,"Excited to be part of a global team at Bloomberg as an intern!",1
+375,"So thrilled to be interning at Lyft this summer!",1
+376,"Feeling honored to be working at TikTok as an intern!",1
+377,"Grateful to have received this incredible opportunity at Twitter!",1
+378,"Excited to be working on cybersecurity projects at Microsoft!",1
+379,"Thankful for the opportunity to gain experience at Adobe!",1
+380,"Excited to announce that I’ll be an intern at Intel!",1
+381,"Thrilled to work with the best minds at NVIDIA as an intern!",1
+382,"Excited to gain hands-on experience in AI at OpenAI!",1
+383,"Happy to share that I’ll be interning at IBM’s quantum computing division!",1
+384,"Feeling grateful to be interning at Netflix!",1
+385,"Excited to be a part of Databricks' Software Engineering Internship program!",1
+386,"Honored to be working at Stripe as an intern!",1
+387,"Beyond excited to start my summer internship at Amazon!",1
+388,"Proud to be working on AI research at DeepMind!",1
+389,"Excited to contribute to groundbreaking research at SpaceX!",1
+390,"Super grateful to be interning at Google’s Cloud division!",1
+391,"Happy to be joining Oracle as a Software Engineering Intern!",1
+392,"Excited to be interning at Slack and working with a great team!",1
+393,"Honored to be interning at Tesla’s software engineering team!",1
+394,"Feeling blessed to be interning at Apple this summer!",1
+395,"Excited to learn and grow as an intern at Airbnb!",1
+396,"Proud to have received an offer from Microsoft!",1
+397,"So grateful to be part of IBM’s internship program!",1
+398,"Looking forward to my summer internship at SAP!",1
+399,"Thankful for this opportunity to be interning at Reddit!",1
+400,"Excited to be interning at Intel’s AI research lab!",1
+401,"Thrilled to be working at PayPal as a Software Engineering Intern!",1
+402,"Excited to share that I’ll be joining Google as a Software Engineering Intern this summer!",1
+403,"Happy to announce that I have accepted a Software Engineering Internship at Microsoft!",1
+404,"Beyond thrilled to start my Software Engineering Internship at Amazon!",1
+405,"Proud to share that I’ll be interning at Meta as a Software Engineer!",1
+406,"Honored to be selected for Apple’s Software Engineering Internship program!",1
+407,"Excited to kick off my internship journey at Tesla’s Autopilot team!",1
+408,"Beyond grateful to be interning at LinkedIn this summer!",1
+409,"Happy to announce that I will be joining NVIDIA as a Software Engineering Intern!",1
+410,"Thrilled to start my internship at Airbnb and work with an amazing team!",1
+411,"Grateful for the opportunity to intern at Stripe as a Software Engineer!",1
+412,"Excited to announce that I’ll be joining Uber as a Software Engineering Intern!",1
+413,"Feeling incredibly honored to start my internship at DoorDash!",1
+414,"Happy to share that I’ll be a Software Engineering Intern at Reddit!",1
+415,"Thankful to Palantir for this amazing Software Engineering Internship opportunity!",1
+416,"Excited to be interning at Snap Inc. this summer!",1
+417,"Can’t wait to start my journey at SpaceX as a Software Engineering Intern!",1
+418,"Proud to be joining IBM as a Software Engineering Intern!",1
+419,"Huge thanks to the Google recruiting team for this internship opportunity!",1
+420,"Excited to start my Software Engineering Internship at Robinhood!",1
+421,"Happy to announce that I’ve secured a Software Engineering Internship at Intel!",1
+422,"Thrilled to work with the amazing engineers at Zoom as an intern!",1
+423,"Super excited to be a Software Engineering Intern at Atlassian!",1
+424,"Beyond grateful to start my internship at Twitter this summer!",1
+425,"Honored to be joining Salesforce’s Software Engineering Internship program!",1
+426,"Excited to explore fintech as a Software Engineering Intern at Stripe!",1
+427,"Proud to be interning at Bloomberg this summer!",1
+428,"Thank you to the Uber recruiting team for this incredible internship!",1
+429,"Excited to work on AI solutions as a Software Engineering Intern at Pinterest!",1
+430,"Beyond thrilled to be joining Cisco as a Software Engineering Intern!",1
+431,"Honored to intern at TikTok and contribute to its engineering team!",1
+432,"Looking forward to starting my internship at Instacart as a Software Engineer!",1
+433,"Excited to research AI at OpenAI as a Software Engineering Intern!",1
+434,"Super grateful to have received an offer from Dropbox for an internship!",1
+435,"Can’t wait to start my journey at Qualcomm as a Software Engineering Intern!",1
+436,"Big thanks to the Tesla recruiting team for making this internship possible!",1
+437,"Excited to work at Waymo as a Software Engineering Intern!",1
+438,"Beyond excited to gain experience at Netflix this summer!",1
+439,"Happy to announce that I’ll be interning at GitHub as a Software Engineer!",1
+440,"Thrilled to be part of IBM’s Software Engineering Internship program!",1
+441,"Excited to start my career journey at Square as a Software Engineering Intern!",1
+442,"Honored to be part of Google’s AI team as an intern!",1
+443,"Excited to be interning at Zoom and working on cutting-edge technologies!",1
+444,"Thankful for this incredible internship opportunity at Coursera!",1
+445,"Excited to contribute to TikTok as a Software Engineering Intern!",1
+446,"Proud to be part of the tech team at Slack this summer!",1
+447,"Happy to be interning at Twilio and learning from an amazing team!",1
+448,"Beyond grateful for this opportunity to work at PayPal as a Software Engineer!",1
+449,"Excited to start my Software Engineering Internship at DeepMind!",1
+450,"Thrilled to work at Stripe and learn from the best in fintech!",1
+451,"Proud to be joining Tesla’s software development team as an intern!",1
+452,"Honored to be interning at SAP and working on innovative software solutions!",1
+453,"Excited to be interning at ASML as a Software Engineer!",1
+454,"Beyond grateful for this hands-on experience at Capital One!",1
+455,"Happy to share that I’ll be interning at Instacart this summer!",1
+456,"Excited to join PayPal’s software engineering internship program!",1
+457,"Proud to be working with a fantastic engineering team at Zoom!",1
+458,"Honored to receive this amazing opportunity at Microsoft!",1
+459,"Excited to be interning at Intel’s AI division!",1
+460,"So grateful for this learning experience at Netflix as a Software Engineering Intern!",1
+461,"Excited to be part of the research team at OpenAI!",1
+462,"Happy to be joining Oracle as a Software Engineering Intern!",1
+463,"Thrilled to contribute to cutting-edge cloud technologies at AWS!",1
+464,"Proud to have received an offer from Google!",1
+465,"Honored to have landed my dream Software Engineering Internship at Adobe!",1
+466,"Beyond excited to be working on next-gen AI solutions at DeepMind!",1
+467,"Excited to gain hands-on experience at Facebook Reality Labs!",1
+468,"Super grateful to be interning at Dropbox!",1
+469,"Excited to work on fintech projects at Stripe this summer!",1
+470,"Thrilled to have received an internship offer from Coinbase!",1
+471,"Honored to be interning at IBM’s cloud division!",1
+472,"Happy to be working with the amazing engineers at Microsoft!",1
+473,"Feeling incredibly lucky to be selected for Tesla’s Software Engineering Internship!",1
+474,"Excited to be interning at Snapchat this summer!",1
+475,"Proud to have received an offer from Salesforce!",1
+476,"Beyond grateful for this incredible opportunity at Bloomberg!",1
+477,"Excited to start my software engineering journey at TikTok!",1
+478,"Can’t wait to join the team at Twitter as a Software Engineering Intern!",1
+479,"Thankful to be joining Cisco’s software development team!",1
+480,"Excited to be interning at Lyft and working on great projects!",1
+481,"Proud to be part of SAP’s internship program!",1
+482,"Super excited to be interning at Reddit as a Software Engineer!",1
+483,"Beyond thrilled to contribute to innovative projects at Palantir!",1
+484,"Happy to be interning at Affirm this summer!",1
+485,"Excited to join the AI research team at Waymo!",1
+486,"Honored to be interning at Databricks this summer!",1
+487,"Grateful to be part of the PayPal internship program!",1
+488,"Excited to be working on cloud security at AWS!",1
+489,"Beyond thrilled to be a Software Engineering Intern at IBM!",1
+490,"Proud to be working on AI projects at Google Cloud!",1
+491,"Happy to be interning at Reddit’s software development team!",1
+492,"Excited to be working with an amazing team at Airbnb!",1
+493,"Beyond grateful to be interning at Oracle!",1
+494,"Thrilled to be starting my journey at Zoom as a Software Engineering Intern!",1
+495,"Proud to be interning at Pinterest this summer!",1
+496,"Happy to share that I’ll be interning at Meta’s AI division!",1
+497,"Excited to gain hands-on experience at Google!",1
+498,"Feeling blessed to be interning at Slack!",1
+499,"Super excited to contribute to Microsoft’s AI team!",1
+500,"Honored to have received an internship at Tesla!",1

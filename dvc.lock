@@ -6,20 +6,20 @@ stages:
     deps:
     - path: nlp-model/data/dataset.csv
       hash: md5
-      md5: 7edb43b041fe9ec8d3ac3ac50e96520c
-      size: 6676
+      md5: 7ab938a4570f0969660ed42e75330068
+      size: 37089
     outs:
     - path: nlp-model/data/processed_data.csv
       hash: md5
-      md5: f8090109a608c3d01b7db4036168a35a
-      size: 6506
+      md5: 4a3763adee40a69b36eb13c11da4dc9b
+      size: 36130
   train:
     cmd: python nlp-model/training/train.py
     deps:
     - path: nlp-model/data/processed_data.csv
       hash: md5
-      md5: f8090109a608c3d01b7db4036168a35a
-      size: 6506
+      md5: 4a3763adee40a69b36eb13c11da4dc9b
+      size: 36130
     - path: nlp-model/data/vocab.json
       hash: md5
       md5: 2654e4f2fa9d94aba9ea6ee4846c4217
@@ -31,12 +31,12 @@ stages:
     outs:
     - path: nlp-model/model.onnx
       hash: md5
-      md5: 705f255910e1b7b743c5a77c77eaba19
+      md5: 2b18801eb14d52a86edb6fff20978518
       size: 1879
   evaluate:
     cmd: python nlp-model/training/test.py
     deps:
     - path: nlp-model/model.onnx
       hash: md5
-      md5: 705f255910e1b7b743c5a77c77eaba19
+      md5: 2b18801eb14d52a86edb6fff20978518
       size: 1879
