@@ -8,3 +8,5 @@
 - add github workflow for chrome extension
 - Finish README
 - Design architecture
+
+https://chatgpt.com/c/67c8e945-fb6c-8011-ac7c-230973dd84fe Inspo

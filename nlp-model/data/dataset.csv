@@ -1,5 +1,101 @@
-text,label
-"Had a fantastic experience working on a challenging project.",0
-"Bragging about my achievements and the awards I received!",1
-"Enjoyed collaborating with amazing colleagues on this project.",0
-"Boasting about my success and promotions again.",1
+id,text,label
+1,"I am so proud of my achievements!",1
+2,"Just another day at work",0
+3,"Look at me, I'm amazing!",1
+4,"Hard work pays off! Just bought my dream car!",1
+5,"I wake up at 4 AM every day to stay ahead of the game!",1
+6,"Feeling blessed to be recognized as the top performer in my company!",1
+7,"Just got featured in a major publication! Dreams do come true!",1
+8,"Another award for the shelf! #Winning",1
+9,"Just secured my biggest deal yet! #Hustle",1
+10,"Grateful for my journey! From zero to millionaire in 5 years!",1
+11,"Taking a break from my crazy successful career to relax!",1
+12,"Just got promoted to VP at my company! #HardWorkPaysOff",1
+13,"I’m honored to be invited as a keynote speaker at this prestigious event!",1
+14,"Woke up today feeling grateful for the empire I’ve built!",1
+15,"Another week, another milestone achieved!",1
+16,"Can’t believe I just hit 100K followers! Thank you all!",1
+17,"Some people talk, I take action! Another big win!",1
+18,"When you work harder than everyone else, success is inevitable!",1
+19,"Not many people can say they’ve accomplished what I have!",1
+20,"It's lonely at the top, but worth every sacrifice!",1
+21,"Earning six figures before 30 wasn’t easy, but I made it happen!",1
+22,"If you’re not waking up at 5 AM to grind, you don’t want it bad enough!",1
+23,"Just booked a luxury vacation as a reward for my endless hustle!",1
+24,"Another day, another success story!",1
+25,"People laughed at me when I started, but look at me now!",1
+26,"I’m happy to announce I’ve started a new role at Google!",1
+27,"Excited to share that I’ve joined Microsoft as a Senior Engineer!",1
+28,"Thrilled to start my journey at Amazon as a Software Developer!",1
+29,"Proud to announce that I’m now a Product Manager at Apple!",1
+30,"Honored to be the newest Data Scientist at Tesla!",1
+31,"Starting my next adventure as a Marketing Lead at Meta!",1
+32,"I’m beyond excited to begin my role as an AI Researcher at OpenAI!",1
+33,"Delighted to share that I’ve joined Salesforce as a Sales Executive!",1
+34,"New beginnings! I’ve officially started my role at Netflix!",1
+35,"Beyond grateful to be joining the leadership team at Adobe!",1
+36,"A new chapter begins as I take on my new role at SpaceX!",1
+37,"I’m officially a Software Engineer at Stripe! Let’s do this!",1
+38,"So grateful for this opportunity to work at Airbnb!",1
+39,"Happy to share that I’m now a UX Designer at Spotify!",1
+40,"Excited to begin my career at Nvidia as a Machine Learning Engineer!",1
+41,"A dream come true! I’m joining Intel as a Hardware Engineer!",1
+42,"Proud to step into my new role as a Senior Developer at Cisco!",1
+43,"Feeling incredibly lucky to be part of the innovation at IBM!",1
+44,"I’m now officially a Cybersecurity Analyst at Palo Alto Networks!",1
+45,"From a dream to reality—starting my role as a Consultant at Deloitte!",1
+46,"Absolutely honored to be part of the AWS team!",1
+47,"Excited for the journey ahead as a Growth Manager at Twitter!",1
+48,"Can’t wait to start working on cutting-edge AI at DeepMind!",1
+49,"Overjoyed to share that I’m a Financial Analyst at Goldman Sachs!",1
+50,"Starting a new adventure as a Blockchain Engineer at Coinbase!",1
+51,"A new journey begins as a Game Developer at Epic Games!",1
+52,"Looking forward to innovating as a Data Engineer at Snowflake!",1
+53,"Humbled and honored to be part of the team at Red Hat!",1
+54,"So thrilled to join the research team at MIT Media Lab!",1
+55,"Another milestone unlocked: I’m now a Principal Engineer at Oracle!",1
+56,"Excited to contribute to the next-gen technology at Qualcomm!",1
+57,"Can’t wait to grow as a Cloud Engineer at Microsoft Azure!",1
+58,"Proud to be joining the security team at CrowdStrike!",1
+59,"A fresh start as a Solutions Architect at Google Cloud!",1
+60,"Officially a Robotics Engineer at Boston Dynamics!",1
+61,"Honored to have been selected for Forbes 30 Under 30!",1
+62,"After months of hard work, I'm thrilled to announce my startup just raised $10M!",1
+63,"Achieving what once seemed impossible—now leading a global team!",1
+64,"Just landed my dream role at Tesla! Hard work pays off!",1
+65,"From intern to executive in just five years! #Dedication",1
+66,"A decade in the making, I’ve finally reached the C-suite!",1
+67,"Excited to share that I’m an Entrepreneur in Residence at Sequoia Capital!",1
+68,"Making an impact in the world of AI—joining the Google Brain team!",1
+69,"So grateful to be recognized as one of the top leaders in tech!",1
+70,"Joining a startup that’s changing the world—what a ride ahead!",1
+71,"Got a promotion and a raise—feeling incredibly blessed!",1
+72,"Excited to be featured as a guest speaker at a global conference!",1
+73,"My hard work has paid off! Just got selected as a TED speaker!",1
+74,"From struggling to thriving—launching my own consulting firm!",1
+75,"Proud to be the youngest VP in my company’s history!",1
+76,"Finally made the transition from corporate to founder life!",1
+77,"Stepping into my new role as a mentor for aspiring entrepreneurs!",1
+78,"Thrilled to have my research published in a leading journal!",1
+79,"So humbled to be a finalist for the Global Innovator Award!",1
+80,"After years of hustle, I’m now financially free!",1
+81,"Giving back to the community by mentoring 100+ young professionals!",1
+82,"Hard work, patience, and perseverance got me to where I am today!",1
+83,"From high school dropout to CEO—anything is possible!",1
+84,"The grind never stops—launching my second company this year!",1
+85,"So honored to be part of the exclusive leadership program at Harvard!",1
+86,"Beyond grateful to be named ‘Top 50 Most Influential in AI’!",1
+87,"After 10+ years in corporate, I’m finally my own boss!",1
+88,"Growing my LinkedIn audience to 200K+ followers—thank you all!",1
+89,"So thrilled to be hosting my own masterclass on career growth!",1
+90,"Another goal checked off—launching my own AI startup!",1
+91,"Excited to bring my expertise to a Fortune 500 company!",1
+92,"Feeling blessed to be working alongside some of the smartest minds!",1
+93,"Sharing my knowledge by writing a book on business leadership!",1
+94,"Thrilled to have secured a full scholarship for my PhD!",1
+95,"Excited to share my thoughts on stage at a major TEDx event!",1
+96,"My startup was just acquired! What an incredible journey!",1
+97,"After years of struggle, I finally made it to the top!",1
+98,"Another speaking engagement booked! Thankful for this journey!",1
+99,"Excited to embark on this incredible adventure in the startup world!",1
+100,"Celebrating 5 years of being a digital nomad—best decision ever!",1

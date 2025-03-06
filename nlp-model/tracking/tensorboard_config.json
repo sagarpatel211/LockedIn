@@ -1,5 +1,4 @@
 {
-    "log_dir": "./logs",
-    "update_freq": 100
-  }
-  
+  "log_dir": "./logs",
+  "port": 6006
+}

@@ -37,7 +37,7 @@ const KeywordTags: React.FC<KeywordTagsProps> = ({ keywords, onUpdate }) => {
         onUpdate(data.filterKeywords);
       }
     });
-  }, []);
+  }, [onUpdate]);
 
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && input.trim() !== "") {

@@ -14,7 +14,13 @@ interface StatsData {
   dailyStats: Record<string, DailyStats>;
 }
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: { name: string; value: number; color: string }[];
+  label?: string;
+}
+
+const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload, label }) => {
   if (!active || !payload || payload.length === 0) return null;
 
   const isDark = document.documentElement.classList.contains("dark");
@@ -31,7 +37,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
       }}
     >
       <p>{label}</p>
-      {payload.map((entry: any, index: number) => (
+      {payload.map((entry: { name: string; value: number; color: string }, index: number) => (
         <p key={index} style={{ color: entry.color }}>
           {entry.name}: {entry.value}
         </p>

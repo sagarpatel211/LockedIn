@@ -1,7 +1,6 @@
-torch
-mlflow
-tensorboard
-onnx
-scikit-learn
-pandas
+onnxruntime
 numpy
+pandas
+scikit-learn
+mlflow
+torch

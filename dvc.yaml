@@ -1,17 +1,21 @@
 stages:
   fetch_data:
-    cmd: python3 nlp-model/training/fetch_data.py
-    outs:
-      - nlp-model/data/dataset.csv
-  train:
-    cmd: python3 nlp-model/training/train.py
+    cmd: python nlp-model/training/fetch_data.py --input nlp-model/data/dataset.csv --output nlp-model/data/processed_data.csv
     deps:
       - nlp-model/data/dataset.csv
+    outs:
+      - nlp-model/data/processed_data.csv
+
+  train:
+    cmd: python nlp-model/training/train.py
+    deps:
+      - nlp-model/training/model.py
+      - nlp-model/data/processed_data.csv
+      - nlp-model/data/vocab.json
     outs:
       - nlp-model/model.onnx
-      - nlp-model/model.pth
-  test:
-    cmd: python3 nlp-model/training/test.py
+
+  evaluate:
+    cmd: python nlp-model/training/test.py
     deps:
-      - nlp-model/data/dataset.csv
-      - nlp-model/model.pth
+      - nlp-model/model.onnx
